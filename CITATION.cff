@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+title: INSERT_PROJECT
+message: If you use this software, please cite it using these metadata.
+type: software
+authors:
+  - name: INSERT_OWNER
+repository-code: https://github.com/INSERT_OWNER/INSERT_REPO
+license: MIT
+version: 0.1.0
+abstract: INSERT_DESCRIPTION

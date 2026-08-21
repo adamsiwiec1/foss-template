@@ -1,0 +1,27 @@
+{
+  "name": "foss-template",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Starter for a free and open source project: community health files, VitePress docs, and GitHub defaults.",
+  "license": "MIT",
+  "homepage": "https://adamsiwiec1.github.io/foss-template/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adamsiwiec1/foss-template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/adamsiwiec1/foss-template/issues"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "devDependencies": {
+    "vitepress": "^2.0.0-alpha.19"
+  }
+}
