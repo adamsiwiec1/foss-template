@@ -11,7 +11,9 @@ This project uses [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 - `scripts/bootstrap-packaging.sh` (+ `make bootstrap-packaging OWNER=…`) to
   create Homebrew/Scoop/apt/Chocolatey companion repos from GitHub templates
-  in one command; example packaging repos marked as templates.
+  in one command; example packaging repos marked as templates. If a target
+  already exists, prompts to skip / rename / archive-then-replace (`gh` required;
+  see `scripts/DEPENDENCIES.md`). `--on-exists` for noninteractive runs.
 - `packaging/` templates for Homebrew, Scoop, apt/dnf Pages, AUR, winget,
   Chocolatey, and optional npm — plus docs linking example companion repos
   (`homebrew-tap`, `scoop-bucket`, `packages`, `chocolatey-packages`).
