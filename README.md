@@ -66,8 +66,13 @@ The site builds from `docs/` and deploys on every push to `main`.
 
 ### Example packaging repos
 
-These empty(ish) catalogs exist so a new project can copy the layout instead of
-guessing Homebrew/Scoop/Pages conventions:
+These are **GitHub template repositories** (same as this one). Create all four
+with one command:
+
+```bash
+./scripts/bootstrap-packaging.sh --owner YOUR_USER_OR_ORG --yes
+# or: make bootstrap-packaging OWNER=YOUR_USER_OR_ORG
+```
 
 | Repo | Why it must be separate |
 | --- | --- |

@@ -26,7 +26,13 @@ under `packaging/aur` and `packaging/winget`.
 ## What to do
 
 1. Read [`packaging/README.md`](https://github.com/adamsiwiec1/foss-template/blob/main/packaging/README.md).
-2. Create the four companion repos once (script in that README).
+2. Create the four companion repos once — they are GitHub **templates**:
+
+```bash
+./scripts/bootstrap-packaging.sh --owner YOUR_USER_OR_ORG --yes
+```
+
+   Or use **Use this template** on each example repo linked below.
 3. Wire release CI to push Cask / Scoop / Pages updates with a
    `PACKAGING_TOKEN`.
 4. Replace every `INSERT_*` placeholder before the first real release.

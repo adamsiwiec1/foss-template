@@ -46,31 +46,35 @@ Replace every `INSERT_*` token (see root [SETUP.md](../SETUP.md)).
 
 ## Create the companion repos once
 
+All four example companions are **GitHub template repositories** under
+[`adamsiwiec1`](https://github.com/adamsiwiec1?tab=repositories&q=template):
+`homebrew-tap`, `scoop-bucket`, `packages`, `chocolatey-packages`.
+
+**One command** (from a clone of foss-template):
+
+```bash
+./scripts/bootstrap-packaging.sh --owner YOUR_GITHUB_USER_OR_ORG --yes
+# dry-run first:
+./scripts/bootstrap-packaging.sh --owner YOUR_ORG --dry-run
+```
+
+That runs `gh repo create … --template adamsiwiec1/<name>` for each companion
+(or seeds files locally if you pass `--from-template=false`).
+
+Manual equivalent:
+
 ```bash
 OWNER=INSERT_OWNER   # e.g. adamsiwiec1 or your-org
 
-gh repo create "$OWNER/homebrew-tap" --public \
-  --description "Homebrew tap for $OWNER CLIs" --add-readme
-gh repo create "$OWNER/scoop-bucket" --public \
-  --description "Scoop bucket for $OWNER CLIs" --add-readme
-gh repo create "$OWNER/packages" --public \
-  --description "apt + dnf repos ($OWNER) via GitHub Pages" --add-readme
-gh repo create "$OWNER/chocolatey-packages" --public \
-  --description "Chocolatey package sources for $OWNER" --add-readme
-
-# packages: Settings → Pages → Deploy from branch gh-pages (or main) / root
+gh repo create "$OWNER/homebrew-tap" --public --template adamsiwiec1/homebrew-tap
+gh repo create "$OWNER/scoop-bucket" --public --template adamsiwiec1/scoop-bucket
+gh repo create "$OWNER/packages" --public --template adamsiwiec1/packages
+gh repo create "$OWNER/chocolatey-packages" --public --template adamsiwiec1/chocolatey-packages
 ```
 
-Seed them from the examples:
-
-```bash
-# After creating empty repos, copy READMEs / .gitkeep layout from:
-#   https://github.com/adamsiwiec1/homebrew-tap
-#   https://github.com/adamsiwiec1/scoop-bucket
-#   https://github.com/adamsiwiec1/packages
-#   https://github.com/adamsiwiec1/chocolatey-packages
-```
-
+Should the companions be templates? **Yes** — same reason `foss-template` is:
+one-click “Use this template” *or* scripted `gh repo create --template`. The
+app repo stays the place you write code; the four catalogs stay thin and reusable.
 ## Release wiring (secrets on the *app* repo)
 
 | Secret | Used for |

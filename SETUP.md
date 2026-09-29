@@ -61,17 +61,18 @@ In the new repo:
 ## 6. Packaging companions (optional but recommended for CLIs)
 
 If you ship a binary users should install with brew / apt / Scoop / etc., create
-the companion repos **once** (Homebrew will not read a Cask from the app repo):
+the companion repos **once**. They are GitHub templates — use the bootstrap script:
 
 ```bash
-gh repo create INSERT_OWNER/homebrew-tap --public --description "Homebrew tap" --add-readme
-gh repo create INSERT_OWNER/scoop-bucket --public --description "Scoop bucket" --add-readme
-gh repo create INSERT_OWNER/packages --public --description "apt + dnf (GitHub Pages)" --add-readme
-gh repo create INSERT_OWNER/chocolatey-packages --public --description "Chocolatey sources" --add-readme
+./scripts/bootstrap-packaging.sh --owner INSERT_OWNER --yes
 ```
 
-Copy templates from [`packaging/`](packaging/) and seed READMEs from the
-[example repos](https://github.com/adamsiwiec1?tab=repositories&q=tap+OR+scoop+OR+packages+OR+chocolatey).
+Or click **Use this template** on each of
+[homebrew-tap](https://github.com/adamsiwiec1/homebrew-tap),
+[scoop-bucket](https://github.com/adamsiwiec1/scoop-bucket),
+[packages](https://github.com/adamsiwiec1/packages),
+[chocolatey-packages](https://github.com/adamsiwiec1/chocolatey-packages).
+
 Details: [packaging/README.md](packaging/README.md) and
 [docs/guide/packaging.md](docs/guide/packaging.md).
 
