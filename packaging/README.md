@@ -53,10 +53,17 @@ All four example companions are **GitHub template repositories** under
 **One command** (from a clone of foss-template):
 
 ```bash
+# Dependency: GitHub CLI — https://cli.github.com/  (gh auth login)
 ./scripts/bootstrap-packaging.sh --owner YOUR_GITHUB_USER_OR_ORG --yes
 # dry-run first:
 ./scripts/bootstrap-packaging.sh --owner YOUR_ORG --dry-run
 ```
+
+If a companion repo **already exists**, the script prints its URL and asks whether to
+**skip**, **rename** (then create from template), or **rename + archive** (then
+create). With `--yes`, use `--on-exists skip|rename|archive` (default `skip`).
+
+See [`scripts/DEPENDENCIES.md`](../scripts/DEPENDENCIES.md).
 
 That runs `gh repo create … --template adamsiwiec1/<name>` for each companion
 (or seeds files locally if you pass `--from-template=false`).
