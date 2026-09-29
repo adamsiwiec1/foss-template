@@ -31,6 +31,7 @@ and a [VitePress](https://vitepress.dev/) docs site (same stack as OnionGate):
 | [CITATION.cff](CITATION.cff) | How to cite the project |
 | [`.github/`](.github/) | Issue / PR templates, Dependabot, CI, Pages deploy |
 | [`docs/`](docs/) | VitePress site → GitHub Pages |
+| [`packaging/`](packaging/) | Homebrew, Scoop, apt/dnf, AUR, winget, Chocolatey, npm templates |
 
 After you customize, check **Insights → Community standards** on the new repo.
 
@@ -59,8 +60,23 @@ The site builds from `docs/` and deploys on every push to `main`.
 - [Getting started](docs/guide/index.md)
 - [Customize after a fork](docs/guide/setup.md)
 - [Write docs](docs/guide/docs.md)
+- [Distribution packaging](docs/guide/packaging.md) — brew, apt, AUR, dnf, Scoop, Chocolatey, winget
 - [Community health files](docs/reference/community-health.md)
 - [Changelog](CHANGELOG.md)
+
+### Example packaging repos
+
+These empty(ish) catalogs exist so a new project can copy the layout instead of
+guessing Homebrew/Scoop/Pages conventions:
+
+| Repo | Why it must be separate |
+| --- | --- |
+| [adamsiwiec1/homebrew-tap](https://github.com/adamsiwiec1/homebrew-tap) | Homebrew tap (`brew tap …`) |
+| [adamsiwiec1/scoop-bucket](https://github.com/adamsiwiec1/scoop-bucket) | Scoop bucket |
+| [adamsiwiec1/packages](https://github.com/adamsiwiec1/packages) | apt + dnf on GitHub Pages |
+| [adamsiwiec1/chocolatey-packages](https://github.com/adamsiwiec1/chocolatey-packages) | Chocolatey nuspec sources |
+
+Full channel matrix: [packaging/README.md](packaging/README.md).
 
 ## Contributing
 

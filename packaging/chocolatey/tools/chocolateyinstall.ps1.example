@@ -1,0 +1,12 @@
+$ErrorActionPreference = 'Stop'
+$toolsDir = Split-Path -Parent $MyInvocation.MyCommand.Definition
+$version = '0.1.0'
+$url64 = "https://github.com/INSERT_OWNER/INSERT_REPO/releases/download/v$version/INSERT_REPO_${version}_windows_amd64.zip"
+$checksum64 = 'INSERT_SHA256_WINDOWS_AMD64'
+
+Install-ChocolateyZipPackage `
+  -PackageName 'INSERT_REPO' `
+  -Url64bit $url64 `
+  -Checksum64 $checksum64 `
+  -ChecksumType64 'sha256' `
+  -UnzipLocation $toolsDir

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>INSERT_OWNER packages (apt + dnf)</title>
+</head>
+<body>
+  <h1>INSERT_OWNER Linux packages</h1>
+  <p>Hosted on GitHub Pages for apt and dnf.</p>
+  <h2>apt</h2>
+  <pre>curl -fsSL @REPO_URL@/install-apt.sh | sudo bash
+sudo apt-get install -y INSERT_REPO</pre>
+  <h2>dnf</h2>
+  <pre>curl -fsSL @REPO_URL@/install-dnf.sh | sudo bash
+sudo dnf install -y INSERT_REPO</pre>
+  <p>Repo root: <a href="@REPO_URL@">@REPO_URL@</a></p>
+</body>
+</html>

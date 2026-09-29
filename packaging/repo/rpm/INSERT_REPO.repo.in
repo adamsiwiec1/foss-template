@@ -1,0 +1,5 @@
+[INSERT_REPO]
+name=INSERT_OWNER INSERT_REPO
+baseurl=@REPO_URL@/rpm
+enabled=1
+gpgcheck=0

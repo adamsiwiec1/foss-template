@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copy to adamsiwiec1/chocolatey-packages/INSERT_REPO/INSERT_REPO.nuspec (or your org). -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>INSERT_REPO</id>
+    <version>0.1.0</version>
+    <title>INSERT_PROJECT</title>
+    <authors>INSERT_OWNER</authors>
+    <owners>INSERT_OWNER</owners>
+    <projectUrl>https://github.com/INSERT_OWNER/INSERT_REPO</projectUrl>
+    <licenseUrl>https://github.com/INSERT_OWNER/INSERT_REPO/blob/main/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <summary>INSERT_DESCRIPTION</summary>
+    <description>INSERT_DESCRIPTION</description>
+    <tags>cli foss INSERT_REPO</tags>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

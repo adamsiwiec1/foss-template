@@ -1,0 +1,25 @@
+# Maintainer: INSERT_CONTACT
+# shellcheck disable=SC2034
+pkgname=INSERT_REPO-bin
+pkgver=0.1.0
+pkgrel=1
+pkgdesc="INSERT_DESCRIPTION"
+arch=('x86_64' 'aarch64')
+url="https://github.com/INSERT_OWNER/INSERT_REPO"
+license=('MIT')
+provides=('INSERT_REPO')
+conflicts=('INSERT_REPO')
+depends=()
+source_x86_64=("${pkgname}-${pkgver}-x86_64::https://github.com/INSERT_OWNER/INSERT_REPO/releases/download/v${pkgver}/INSERT_REPO_${pkgver}_linux_amd64")
+source_aarch64=("${pkgname}-${pkgver}-aarch64::https://github.com/INSERT_OWNER/INSERT_REPO/releases/download/v${pkgver}/INSERT_REPO_${pkgver}_linux_arm64")
+sha256sums_x86_64=('SKIP')
+sha256sums_aarch64=('SKIP')
+
+package() {
+  local bin
+  case "$CARCH" in
+    x86_64) bin="${pkgname}-${pkgver}-x86_64" ;;
+    aarch64) bin="${pkgname}-${pkgver}-aarch64" ;;
+  esac
+  install -Dm755 "${srcdir}/${bin}" "${pkgdir}/usr/bin/INSERT_REPO"
+}

@@ -1,0 +1,2 @@
+# INSERT_OWNER apt repository (unsigned / trusted=yes until GPG is configured)
+deb [trusted=yes] @REPO_URL@/deb stable main

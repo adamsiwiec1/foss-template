@@ -58,7 +58,24 @@ In the new repo:
   `CONTRIBUTING`, `CODE_OF_CONDUCT`, `SECURITY`, `SUPPORT`, `GOVERNANCE`).
 - Add every user-visible change under `## [Unreleased]` in `CHANGELOG.md`.
 
-## 6. First push check
+## 6. Packaging companions (optional but recommended for CLIs)
+
+If you ship a binary users should install with brew / apt / Scoop / etc., create
+the companion repos **once** (Homebrew will not read a Cask from the app repo):
+
+```bash
+gh repo create INSERT_OWNER/homebrew-tap --public --description "Homebrew tap" --add-readme
+gh repo create INSERT_OWNER/scoop-bucket --public --description "Scoop bucket" --add-readme
+gh repo create INSERT_OWNER/packages --public --description "apt + dnf (GitHub Pages)" --add-readme
+gh repo create INSERT_OWNER/chocolatey-packages --public --description "Chocolatey sources" --add-readme
+```
+
+Copy templates from [`packaging/`](packaging/) and seed READMEs from the
+[example repos](https://github.com/adamsiwiec1?tab=repositories&q=tap+OR+scoop+OR+packages+OR+chocolatey).
+Details: [packaging/README.md](packaging/README.md) and
+[docs/guide/packaging.md](docs/guide/packaging.md).
+
+## 7. First push check
 
 ```bash
 npm ci

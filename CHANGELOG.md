@@ -9,5 +9,8 @@ This project uses [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Added
 
+- `packaging/` templates for Homebrew, Scoop, apt/dnf Pages, AUR, winget,
+  Chocolatey, and optional npm — plus docs linking example companion repos
+  (`homebrew-tap`, `scoop-bucket`, `packages`, `chocolatey-packages`).
 - Community health files, VitePress docs, and GitHub Actions for a new FOSS
   repository.

@@ -33,6 +33,7 @@ export default defineConfig({
             { text: "What this is", link: "/guide/" },
             { text: "Customize after a fork", link: "/guide/setup" },
             { text: "Write docs", link: "/guide/docs" },
+            { text: "Distribution packaging", link: "/guide/packaging" },
           ],
         },
       ],
@@ -54,6 +55,7 @@ export default defineConfig({
           text: "Reference",
           items: [
             { text: "Community health files", link: "/reference/community-health" },
+            { text: "Packaging channels", link: "/guide/packaging" },
             { text: "Changelog", link: "/reference/changelog" },
           ],
         },

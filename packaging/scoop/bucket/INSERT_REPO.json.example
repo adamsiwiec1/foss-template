@@ -1,0 +1,18 @@
+{
+  "version": "0.1.0",
+  "description": "INSERT_DESCRIPTION",
+  "homepage": "https://github.com/INSERT_OWNER/INSERT_REPO",
+  "license": "MIT",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/INSERT_OWNER/INSERT_REPO/releases/download/v0.1.0/INSERT_REPO_0.1.0_windows_amd64.zip",
+      "bin": ["INSERT_REPO.exe"],
+      "hash": "INSERT_SHA256_WINDOWS_AMD64"
+    },
+    "arm64": {
+      "url": "https://github.com/INSERT_OWNER/INSERT_REPO/releases/download/v0.1.0/INSERT_REPO_0.1.0_windows_arm64.zip",
+      "bin": ["INSERT_REPO.exe"],
+      "hash": "INSERT_SHA256_WINDOWS_ARM64"
+    }
+  }
+}

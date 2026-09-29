@@ -11,6 +11,8 @@ Short version:
 4. On a fork, enable Actions (GitHub leaves them off).
 5. Change `docs/.vitepress/config.ts` title, description, and the
    `adamsiwiec1/foss-template` fallback if the repo name changed.
+6. For CLIs, create packaging companion repos (brew tap, Scoop bucket, apt/dnf
+   Pages, Chocolatey) — see [Distribution packaging](./packaging.md).
 
 VitePress `base` is `/${repo}/` so GitHub Pages works at
 `https://<owner>.github.io/<repo>/`. In CI it reads `GITHUB_REPOSITORY`.
